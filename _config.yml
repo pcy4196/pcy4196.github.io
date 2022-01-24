@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "PCY'S Dev Blog"
 title_separator          : " "
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Dev Blog In jekyll"
+name                     : "Designed(Written) by PCY In Seoul"
 description              : "배운걸 기록하는 공간(JAVA, Spring, AWS...)"
 url                      : "https://pcy4196.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
