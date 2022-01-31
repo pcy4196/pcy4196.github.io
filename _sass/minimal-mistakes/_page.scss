@@ -334,6 +334,22 @@ body {
   }
 }
 
+.page__taxonomy-item-cate {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid mix(#c1dbf7, $border-color, 25%);
+  background-color: #c1dbf7;
+  border-radius: $border-radius;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+}
+
 .taxonomy__section {
   margin-bottom: 2em;
   padding-bottom: 1em;
