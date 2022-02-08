@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Jekyll 첫번째 글(TEST)"
 excerpt: "Jekyll 첫번째 글(TEST) - TEST 문서"
 categories: etc
