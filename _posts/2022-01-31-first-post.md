@@ -10,6 +10,9 @@ date: 2022-01-31
 toc: true
 toc_sticky: true
 toc_label: "목차"
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 <!--
 Front Matter
