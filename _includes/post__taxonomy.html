@@ -26,12 +26,15 @@
                 {%- for hash in category_hashes -%}
                     {%- assign keyValue = hash | split: '|' -%}
                     {%- capture category_word -%}{{ keyValue[1] | strip_newlines }}{%- endcapture -%}
-                    <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item-cate" rel="tag">{{ category_word }}</a>{%- unless forloop.last -%}<span class="sep"> </span>{%- endunless -%}
+                    <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item-cate" rel="tag">
+                        {%- if category_word.size > 12 -%}{{ category_word | slice: 0, 10 }}..{% else %}{{ category_word }}{%- endif -%}</a>{%- unless forloop.last -%}<span class="sep"> </span>{%- endunless -%}
                 {%- endfor -%}
-                {% for hash in tag_hashes %}
+                {% for hash in tag_hashes limit: 2 %}
                     {% assign keyValue = hash | split: '|' %}
                     {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-                    <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep"> </span>{% endunless %}
+                    <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item" rel="tag">
+                        {%- if tag_word.size > 12 -%}{{ tag_word | slice: 0, 10 }}..{% else %}{{ tag_word }}{%- endif -%}</a>{% unless forloop.last %}<span class="sep"> </span>{% endunless %}
+                    {% if forloop.last %}<a class="page__taxonomy-item" rel="tag">..</a>{% endif %}
                 {% endfor %}
             </span>
         </span>
