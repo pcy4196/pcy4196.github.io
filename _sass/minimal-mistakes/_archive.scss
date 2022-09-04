@@ -461,3 +461,18 @@
 		display: inline-block;
 	}
 }
+
+.highlight__item {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.date__item {
+  margin-left: 30px;
+  text-indent: -30px;
+  .date__text {
+    font-weight: 500;
+    font-size: $type-size-8;
+    white-space:nowrap;
+  }
+}

@@ -1,0 +1,15 @@
+<div>
+    <h3><a href="/categories#{{ page.categories[0] | slugify }}">{{ page.categories[0] }}</a> 카테고리의 다른 글</h3>
+    <div>
+        {% for post in site.posts %}
+            {% if page.categories[0] != post.categories[0] %}
+                {% continue %}
+            {% endif %}
+            {% if post.id == page.id %}
+                {% include archive-shorts.html type="highlight" %}
+            {% else %}
+                {% include archive-shorts.html type="list" %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
