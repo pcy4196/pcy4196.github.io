@@ -6,8 +6,8 @@
 
 <div class="{{ include.type | default: 'list' }}__item date__item">
   {% if post.id == page.id %}
-    <a href="{{ post.url | relative_url }}" rel="permalink"><li style="color: blue;list-style: none;">👈 {{ title }}<span class="date__text" style="color: grey;">{{ post.date | slice: 0, 10}}</span></li></a>
+    <a href="{{ post.url | relative_url }}" rel="permalink"><li style="color: blue;list-style: none;"> 👈 {{ title }}<span class="date__text" style="color: grey;">{{ post.date | slice: 0, 10}}</span></li></a>
   {% else %}
-    <a href="{{ post.url | relative_url }}" rel="permalink"><li style="color: blue;list-style: none;">👉 {{ title }}<span class="date__text" style="color: grey;">{{ post.date | slice: 0, 10}}</span></li></a>
+    <a href="{{ post.url | relative_url }}" rel="permalink"><li style="color: blue;list-style: none;"> 👉 {{ title }}<span class="date__text" style="color: grey;">{{ post.date | slice: 0, 10}}</span></li></a>
   {% endif %}
 </div>
